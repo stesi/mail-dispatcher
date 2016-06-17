@@ -1,9 +1,1 @@
-{
-	"template_dir" : "",
-	"template_extension" : "",
-	"username": "",
-	"password": "",
-	"host": "",
-	"port": "",
-	"smtp_secure": ""
-}
+{"template_dir":"C:\\Users\\Mauro\\git\\MailDispatcher\\template","template_extension":"html","username":"gles@stesi.eu","password":"www.stesi.eu","host":"smtps.aruba.it","smtp_secure":"ssl","port":"465"}
