@@ -1,0 +1,9 @@
+{
+	"template_dir" : "",
+	"template_extension" : "",
+	"username": "",
+	"password": "",
+	"host": "",
+	"port": "",
+	"smtp_secure": ""
+}

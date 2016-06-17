@@ -1,0 +1,25 @@
+{
+	"keywords" : [
+		"mail dispatcher propel stesi"
+	],
+	"autoload" : {
+		"psr-4" : {
+			"STeSI\\MailDispatcher\\" : "src",
+			"STeSI\\Entity\\" : "src/entity/STeSI/Entity"
+		}
+	},
+	"name" : "STeSI/MailDispatcher",
+	"license" : "MIT",
+	"type" : "project",
+	"description" : "Inserts the email to be sent to the database and after sends them. This project use Propel2 as ORM.",
+	"require" : {
+		"php" : ">=5.6",
+		"propel/propel" : "dev-master",
+		"phpmailer/phpmailer" : "6.0.0rc2"
+	},
+	"authors" : [{
+			"name" : "Mauro Cerone",
+			"email" : "cerone.m@stesi.eu"
+		}
+	]
+}
