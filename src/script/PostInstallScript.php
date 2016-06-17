@@ -37,8 +37,12 @@ class PostInstallScript {
 		$conf ['port'] = empty ( $input ) ? "465" : $input;
 		$file = "config/config.json";
 		$fp = fopen ( $file, "w+" );
-		fwrite ( $fp, json_encode ( $conf ) );
+		fwrite ( $fp, json_encode ( $conf, JSON_PRETTY_PRINT ) );
 		fclose ( $fp );
 		copy ( "config/mailer.schema.xml", $propelPath . "/mailer.schema.xml" );
+		echo "Please launch:\n";
+		echo "\t-propel diff\n";
+		echo "\t-propel migrate\n";
+		echo "\t-propel model:build\n";
 	}
 }
