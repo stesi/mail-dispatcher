@@ -8,7 +8,7 @@
 			"STeSI\\Entity\\" : "src/entity/STeSI/Entity"
 		}
 	},
-	"name" : "STeSI/MailDispatcher",
+	"name" : "STeSI/mail-dispatcher",
 	"license" : "MIT",
 	"type" : "project",
 	"description" : "Inserts the email to be sent to the database and after sends them. This project use Propel2 as ORM.",
