@@ -1,0 +1,19 @@
+<database name="default" defaultIdMethod="native"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://xsd.propelorm.org/1.6/database.xsd"
+	namespace="STeSI\Entity">
+	<table name="stesi_mail" phpName="StesiMail">
+		<behavior name="timestampable" />
+		<column name="id" type="integer" required="true" primaryKey="true"
+			autoIncrement="true" />
+		<column name="_from" type="varchar" size="255" required="true"
+			phpName="From" />
+		<column name="a" type="varchar" size="512" phpName="A" />
+		<column name="cc" type="varchar" size="512" phpName="Cc" />
+		<column name="content" type="longvarchar" phpName="Content"></column>
+		<column name="attachment" type="longvarchar" phpName="Attachment"></column>
+		<column name="delivery_status" type="tinyint" phpName="DeliveryStatus" defaultValue='0'></column>
+		<column name="error_message" type="longvarchar" phpName="ErrorMessage" ></column>
+		<column name="subject" type="varchar" size="256" phpName="Subject" ></column>
+	</table>
+</database>
