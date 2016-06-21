@@ -54,7 +54,7 @@ class Template {
 	 * @return \STeSI\MailDispatcher\Template
 	 */
 	public function addKeyVal(KeyVal $kv) {
-		array_push ( $this->keyVal, $kv );
+		$this->keyVal[$kv->getKey()]=$kv;
 		return $this;
 	}
 	/**
