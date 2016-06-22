@@ -15,7 +15,7 @@ class Mailer {
 	 * @todo implement the attachment (path to file, or database blob)
 	 */
 	public static function addMailToSend(Email $email) {
-		if (! empty ( $email->getFrom () )) {
+		if (! empty ( $email->getFrom ()->getAddress() )) {
 			$newMail = new StesiMail ();
 			$newMail->setFrom ( $email->getFrom ()->getAddress () )->setA ( $email->getStringA () )->setCc ( $email->getStringCc () )->setContent ( 
 					$email->getTemplate ()->getHtml () )->setSubject ( $email->getSubject () );
