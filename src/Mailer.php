@@ -15,9 +15,12 @@ class Mailer {
 	 * @todo implement the attachment (path to file, or database blob)
 	 */
 	public static function addMailToSend(Email $email) {
-		$newMail = new StesiMail ();
-		$newMail->setFrom ( $email->getFrom ()->getAddress () )->setA ( $email->getStringA () )->setCc ( $email->getStringCc () )->setContent ( $email->getTemplate ()->getHtml () )->setSubject ( $email->getSubject () );
-		$newMail->save ();
+		if (! empty ( $email->getFrom () )) {
+			$newMail = new StesiMail ();
+			$newMail->setFrom ( $email->getFrom ()->getAddress () )->setA ( $email->getStringA () )->setCc ( $email->getStringCc () )->setContent ( 
+					$email->getTemplate ()->getHtml () )->setSubject ( $email->getSubject () );
+			$newMail->save ();
+		}
 	}
 	/**
 	 *
@@ -46,12 +49,12 @@ class Mailer {
 				$arrayA = explode ( ";", $mail->getA () );
 				$arrayCC = explode ( ";", $mail->getCc () );
 				foreach ( $arrayA as $a ) {
-					if(!empty($a)){
+					if (! empty ( $a )) {
 						$mailer->addAddress ( $a );
 					}
 				}
 				foreach ( $arrayCC as $cc ) {
-					if(!empty($cc)){
+					if (! empty ( $cc )) {
 						$mailer->addCC ( $cc );
 					}
 				}
