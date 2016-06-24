@@ -15,7 +15,7 @@
 	"description" : "Inserts the email to be sent to the database and after sends them. This project use Propel2 as ORM.",
 	"require" : {
 		"php" : ">=5.6",
-		"phpmailer/phpmailer" : "5.2.16@stable",
+		"phpmailer/phpmailer" : "6.0.0rc2",
 		"composer/composer" : "1.1.2",
 		"propel/propel" : "dev-master"
 	},
@@ -28,5 +28,6 @@
 		"post-install-cmd" : [
 			"STeSI\\MailDispatcher\\script\\PostInstallScript::postInstall"
 		]
-	}
+	},
+	"minimum-stability" : "dev"
 }
