@@ -15,9 +15,9 @@
 	"description" : "Inserts the email to be sent to the database and after sends them. This project use Propel2 as ORM.",
 	"require" : {
 		"php" : ">=5.6",
-		"propel/propel" : "dev-master",
 		"phpmailer/phpmailer" : "5.2.16@stable",
-		"composer/composer" : "1.1.2"
+		"composer/composer" : "1.1.2",
+		"propel/propel" : "dev-master"
 	},
 	"authors" : [{
 			"name" : "Mauro Cerone",
