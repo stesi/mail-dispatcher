@@ -22,8 +22,11 @@ class Contact {
      * @return \STeSI\MailDispatcher\Contact
      */
     public function setAddress($address){
-        $this->address = $address;
-        return $this;
+    	$address = trim($address);
+    	if(!empty($address)){
+    		$this->address=$address;
+    	}
+    	return $this;
     }
     
     public function __toString(){
