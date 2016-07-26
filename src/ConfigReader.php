@@ -21,10 +21,10 @@ class ConfigReader {
 	 */
 	protected function __construct($confPath) {
 		$this->confPath = $confPath;
-		if (! file_exists ( '../config/config.json' )) {
+		if (! file_exists ( $this->confPath )) {
 			throw new \Exception ( "Configuration file not found. Please create it. config/config.json" );
 		}
-		$str = file_get_contents ( '../config/config.json' );
+		$str = file_get_contents ( $this->confPath );
 		$json = json_decode ( $str, true );
 		foreach ( $json as $key => $val ) {
 			switch ($key) {
