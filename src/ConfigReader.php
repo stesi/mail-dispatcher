@@ -58,13 +58,13 @@ class ConfigReader {
 	 *
 	 * @param string $confPath        	
 	 */
-	public static function getInstance($confPath = '../config/config.json') {
-		if (self::$instance == null) {
-			$c = __CLASS__;
-			self::$instance = new $c ( $confPath );
-		}
-		return self::$instance;
-	}
+    public static function getInstance($confPath = __DIR__.'/../../../../config/config.json') {
+        if (self::$instance == null) {
+            $c = __CLASS__;
+            self::$instance = new $c ( $confPath );
+        }
+        return self::$instance;
+    }
 	/**
 	 *
 	 * Mauro Cerone
